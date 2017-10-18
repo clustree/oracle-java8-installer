@@ -1,7 +1,17 @@
+oracle-java8-installer (8u152-1~webupd8~0.1) xenial; urgency=medium
+
+  * Non-maintainer upload.
+  * New upstream release.
+  * Bump compat. version from 5 to 9.
+  * http://www.oracle.com/technetwork/java/javase/8u152-relnotes-3850503.html
+  * http://www.oracle.com/technetwork/java/javase/8u151-relnotes-3850493.html
+
+ -- Sebastien Badia <sbadia@debian.org>  Wed, 18 Oct 2017 13:19:45 +0200
+
 oracle-java8-installer (8u144-1~webupd8~0) xenial; urgency=medium
 
   * New upstream release
-  * This release contains fixes for security vulnerabilities described 
+  * This release contains fixes for security vulnerabilities described
     in the Oracle Java SE Critical Patch Update Advisory:
     http://www.oracle.com/technetwork/security-advisory/cpujul2017-3236622.html
   * Release notes:
@@ -14,7 +24,7 @@ oracle-java8-installer (8u131-1~webupd8~2) xenial; urgency=medium
   * New upstream release
   * Added openjdk-8-jdk, openjdk-8-jdk, openjdk-8-jre-headless and
     icedtea-8-plugin to "Provides"
-  * This release contains fixes for security vulnerabilities described 
+  * This release contains fixes for security vulnerabilities described
     in the Oracle Java SE Critical Patch Update Advisory:
     http://www.oracle.com/technetwork/security-advisory/cpuapr2017-3236618.html
   * Release notes:
@@ -26,7 +36,7 @@ oracle-java8-installer (8u121-1~webupd8~2) xenial; urgency=medium
 
   * oracle-java8-set-default: Don't depend on strict (>= ${source:Version})
     version of oracle-java8-installer so it doesn't break things with
-    oracle-java8-unlimited-jce-policy when switching between 
+    oracle-java8-unlimited-jce-policy when switching between
     oracle-java-7/9-installer and oracle-java8-installer, and the
     latter is not the latest version
 
@@ -41,7 +51,7 @@ oracle-java8-installer (8u121-1~webupd8~1) xenial; urgency=medium
 oracle-java8-installer (8u121-1~webupd8~0) xenial; urgency=medium
 
   * New upstream release
-  * This release contains fixes for security vulnerabilities described 
+  * This release contains fixes for security vulnerabilities described
     in the Oracle Java SE Critical Patch Update Advisory:
     http://www.oracle.com/technetwork/security-advisory/cpujan2017-2881727.html
   * Release notes:
@@ -52,7 +62,7 @@ oracle-java8-installer (8u121-1~webupd8~0) xenial; urgency=medium
 oracle-java8-installer (8u111+8u111arm-1~webupd8~0) xenial; urgency=medium
 
   * New upstream release
-  * This release contains fixes for security vulnerabilities described 
+  * This release contains fixes for security vulnerabilities described
     in the Oracle Java SE Critical Patch Update Advisory:
     http://www.oracle.com/technetwork/security-advisory/cpuoct2016-2881722.html
   * Release notes:
@@ -76,10 +86,10 @@ oracle-java8-installer (8u101+8u101arm-1~webupd8~2) xenial; urgency=medium
 oracle-java8-installer (8u101+8u101arm-1~webupd8~0) xenial; urgency=medium
 
   * New upstream release
-  * This release contains fixes for security vulnerabilities described 
+  * This release contains fixes for security vulnerabilities described
     in the Oracle Java SE Critical Patch Update Advisory:
     http://www.oracle.com/technetwork/security-advisory/cpujul2016-2881720.html
-  * Release notes: 
+  * Release notes:
     http://www.oracle.com/technetwork/java/javase/8u101-relnotes-3021761.html
   * Place security config files from /usr/lib/jvm/java-8-oracle/jre/lib/security
     in /etc/java-8-oracle/security/ and symlink them back to the original
@@ -106,7 +116,7 @@ oracle-java8-installer (8u77+8u77arm-1~webupd8~4) xenial; urgency=medium
     If the file doesn't exist, it's written by this package with some
     default settings
   * Removed timeout from the default wget settings used by this package
-    but it may still be used since the old 
+    but it may still be used since the old
     /var/cache/oracle-jdk8-installer/wgetrc file is not removed.
 
  -- Alin Andrei <webupd8@gmail.com>  Thu, 31 Mar 2016 13:52:21 +0200
@@ -181,7 +191,7 @@ oracle-java8-installer (8u31+8u33arm-1~webupd8~0) lucid; urgency=medium
 oracle-java8-installer (8u25+8u6arm-1~webupd8~1) lucid; urgency=medium
 
   * New upstream release
-  * Added oracle-java8-unlimited-jce-policy - it only works if it's 
+  * Added oracle-java8-unlimited-jce-policy - it only works if it's
     installed AFTER installing the Oracle Java 8 package
 
  -- Alin Andrei <webupd8@gmail.com>  Wed, 15 Oct 2014 16:34:19 +0200
