@@ -1,3 +1,12 @@
+oracle-java8-installer (8u162~webupd8~0.1) xenial; urgency=medium
+
+  * Non-maintainer upload.
+  * New upstream release.
+  * http://www.oracle.com/technetwork/java/javase/8u161-relnotes-4021379.html
+  * http://www.oracle.com/technetwork/java/javase/8u162-relnotes-4021436.html
+
+ -- Sebastien Badia <sbadia@debian.org>  Wed, 17 Jan 2018 11:31:54 +0100
+
 oracle-java8-installer (8u152-1~webupd8~0.1) xenial; urgency=medium
 
   * Non-maintainer upload.

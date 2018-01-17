@@ -16,10 +16,10 @@ VER='0.6alpha'
 
 case $(dpkg --print-architecture) in
 'i386'|'i586'|'i686') arch=i386; dld=i586;
-  SHA256SUM_TGZ="fc60b121d4b194fa70084fd0ca0d69e8b78e5db01a071efe200e90eed83c4c3e" #must be modified for each release
+  SHA256SUM_TGZ="eecf88dbcf7c78d236251d44350126f1297a522f2eab974b4027ef20f7a6fb24" #must be modified for each release
   ;;
 'amd64'  ) arch=amd64; dld=x64;
-  SHA256SUM_TGZ="218b3b340c3f6d05d940b817d0270dfe0cfd657a636bad074dcabe0c111961bf" #must be modified for each release
+  SHA256SUM_TGZ="68ec82d47fd9c2b8eb84225b6db398a72008285fafc98631b1ff8d2229680257" #must be modified for each release
   ;;
 arm*      )
   arch=arm
@@ -34,12 +34,12 @@ arm*      )
 			else
 				# Hardfloat
 				dld='arm32-vfp-hflt'
-				SHA256SUM_TGZ="35ab532355c72310c4c7add2b7c7f9d1eb0e045cf59d3fd69ee08fa6a9e610f0" #must be modified for each release
+				SHA256SUM_TGZ="57720cc98e0dd709e8439df73d70cd1252d76f059e3e08ce0b36e8776b7bfa77" #must be modified for each release
 			fi
 		fi
 	elif [ `uname -m` = "armv8l" ] || [ `uname -m` = "arm64" ] || [ `uname -m` = "aarch64" ]; then
 		dld='arm64-vfp-hflt'
-		SHA256SUM_TGZ="732609dd090a7d20e09b48b90f8f447497879bb6da1b786a9dd1ea6e91ea178f" #must be modified for each release
+		SHA256SUM_TGZ="c84d7d32f1292b9d6b645ee286903b1b2d6881897e734c056efab8b9ab66d3a7" #must be modified for each release
 	else
 		echo "Oracle JDK 8 only supports ARM v6/v7/v8 hardfloat."
 		arch=''
@@ -54,24 +54,24 @@ esac
 ########Variables
 
 if [ ! $arch = "arm" ]; then
-	JAVA_VERSION=8u152 #must be modified for each release jdk-8u5-linux-x64.tar.gz
-	J_DIR=jdk1.8.0_152 #must be modified for each release
+	JAVA_VERSION=8u162 #must be modified for each release jdk-8u5-linux-x64.tar.gz
+	J_DIR=jdk1.8.0_162 #must be modified for each release
 	FILENAME=jdk-${JAVA_VERSION}-linux-${dld}.tar.gz
-	PARTNER_URL=http://download.oracle.com/otn-pub/java/jdk/8u152-b16/aa0333dd3019491ca4f6ddbe78cdb6d0/$FILENAME #must be modified for each release
-	for JAVA_VERSION_OLD2 in `seq 1 151`; do #must be modified for each release
+	PARTNER_URL=http://download.oracle.com/otn-pub/java/jdk/8u162-b12/0da788060d494f5095bf8624735fa2f1/$FILENAME #must be modified for each release
+	for JAVA_VERSION_OLD2 in `seq 1 161`; do #must be modified for each release
 	   FILENAMES_OLD2="jdk-8u${JAVA_VERSION_OLD2}-linux-${dld}*.tar.gz $FILENAMES_OLD2"
 	done
 else
 	JAVA_VERSION=8u152 #must be modified for each release jdk-8-linux-arm-vfp-hflt.tar.gz
 	J_DIR=jdk1.8.0_152 #must be modified for each release
 	FILENAME=jdk-${JAVA_VERSION}-linux-${dld}.tar.gz
-	PARTNER_URL=http://download.oracle.com/otn-pub/java/jdk/8u152-b16/aa0333dd3019491ca4f6ddbe78cdb6d0/$FILENAME #must be modified for each release
-	for JAVA_VERSION_OLD1 in `seq 1 151`; do #must be modified for each release
+	PARTNER_URL=http://download.oracle.com/otn-pub/java/jdk/8u162-b12/0da788060d494f5095bf8624735fa2f1/$FILENAME #must be modified for each release
+	for JAVA_VERSION_OLD1 in `seq 1 161`; do #must be modified for each release
 		FILENAMES_OLD1="jdk-8u${JAVA_VERSION_OLD1}-linux-${dld}*.tar.gz $FILENAMES_OLD1 jdk-8-*.tar.gz"
 	done
 fi
 
-for JAVA_VERSION_OLD in `seq 53 151`; do #must be modified for each release
+for JAVA_VERSION_OLD in `seq 53 161`; do #must be modified for each release
   FILENAMES_OLD="jdk-8-ea-bin-b${JAVA_VERSION_OLD}-linux-${dld}-*.tar.gz $FILENAMES_OLD" #old name
   FILENAMES_OLD_N="jdk-8-fcs-bin-b${JAVA_VERSION_OLD}-linux-${dld}*.tar.gz $FILENAMES_OLD_N" #new name
   FILENAMES_OLD_NA="jdk-8-fcs-b${JAVA_VERSION_OLD}-linux-${dld}*.tar.gz $FILENAMES_OLD_NA" #arm
