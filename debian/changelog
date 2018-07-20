@@ -1,3 +1,10 @@
+oracle-java8-installer (8u181~webupd8~0.1ubuntu1) xenial; urgency=medium
+
+  * Non-maintainer upload.
+  * New upstream release.
+
+ -- Patrick Mézard <patrick@clustree.com>  Fri, 20 Jul 2018 09:58:11 +0000
+
 oracle-java8-installer (8u172~webupd8~0.1) xenial; urgency=medium
 
   * Non-maintainer upload.
